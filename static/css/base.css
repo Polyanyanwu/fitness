@@ -1,7 +1,28 @@
-body {
-  font-size: .875rem;
+html {
+  height: 100%;
 }
 
+body {
+  /* font-size: .875rem; */
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  height: calc(100vh - 90px);
+  /* position: fixed; */
+  width: 100%;
+  margin-top: 20px!important;
+  overflow: auto;
+}
 .feather {
   width: 16px;
   height: 16px;
@@ -27,7 +48,7 @@ body {
   /* rtl:remove */
   left: 0;
   z-index: 100; /* Behind the navbar */
-  padding: 60px 0 0; /* Height of navbar */
+  padding: 69px 0 0; /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
@@ -75,6 +96,8 @@ body {
 
 #sidebarMenu {
   overflow-y: auto;
+  /* margin-top: 90px; */
+  /* height: calc(100vh - 69px); */
 }
 /*
  * Navbar
@@ -108,4 +131,28 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/* Django allauth */
+.form-inner-content label:not([for='id_remember']) {
+  display: none;
+}
+
+.allauth-email-label {
+  display: block !important;
+}
+
+.form-inner-content div input,
+.form-inner-content div select {
+  margin-top: 0.6rem;
+  width:100%;
+}
+
+.form-inner-content input {
+  color: var(--rich-black);
+  font-weight: bold;
+}
+
+.form-inner-content input::placeholder {
+  color: var(--bs-gray-500);
 }
