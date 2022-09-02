@@ -145,7 +145,7 @@ main {
 .form-inner-content div input,
 .form-inner-content div select {
   margin-top: 0.6rem;
-  width:100%;
+  /* width:100%; */
 }
 
 .form-inner-content input {
@@ -155,4 +155,10 @@ main {
 
 .form-inner-content input::placeholder {
   color: var(--bs-gray-500);
+}
+
+.img-home {
+  object-fit: cover;
+  width: auto;
+  height: 70vh;
 }
